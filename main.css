@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-wave{
+    background-image: url("img/wave.png");
+    transform: rotateZ(45deg);
+    width: 1920px;
+    height: 787px;
+}
+
+html,body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.content h1, .content h2, .content h3, .content h4 {
+    margin: 20px auto;
+    font-weight: 400;
+}
+
+.content a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content p {
+    text-indent: 2em;
+    text-align: justify;
+    padding: 10px;
+}
+
+main{
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    min-height: 640px;
+    transform: translate(0,-50%);
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contents{
+    position: relative;
+    width: 400px;
+}
+
+.content{
+    position: absolute;
+    color: #fff;
+    transition: linear .6s;
+    opacity: 0;
+}
+
+
+.content.present{
+    top: 0;
+    opacity: 1;
+}
+
+.content.past{
+    top: -110vh;
+}
+
+.content.future{
+    top: 120vh;
+}
+
+
+
+.content.first{
+    padding: 80px 100px;
+}
+.content.first .hello{
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #204969;
+    text-align: center;
+}
+
+.content.second{
+    padding: 80px 20px;
+}
+
+
+.contentTable {
+    width: 96%;
+    margin: 40px auto;
+}
+
+.contentTable td, .contentTable th {
+    padding: 15px 10px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.contentTable strong {
+    font-weight: 100;
+}
+
+.contentTable .right {
+    text-align: right;
+}
+
+.contentTable tbody tr td {
+    padding: 10px 10px;
+    line-height: 1.4em;
+}
+
+h1.main-title{
+    font-size: 48px;
+}
+
+.bgs{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+.bgs *{
+    width: 100%;
+    height: 100%;
+}
+.bgs .bg1{
+    background-color: #204969;
+}
+
+@keyframes upAndDown {
+    0%{
+        margin-top: 0;
+    }
+    50%{
+        margin-top: -20px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+.float-btn{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    margin-left: -16px;
+    width: 32px;
+    height: 32px;
+    border-left:2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
+    transform: rotate(-45deg);
+    animation: upAndDown 2s linear infinite;
+    cursor: pointer;
+}
