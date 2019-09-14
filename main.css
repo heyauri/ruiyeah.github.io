@@ -202,6 +202,7 @@ h1.main-title{
         height: 88%;
         transform: translate(0,0);
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .left-td{
