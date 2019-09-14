@@ -13,8 +13,8 @@ function Particle(conf) {
     //obj['vx'] = 6+seed1 * coefficientV;
     //obj['vy'] = 6+seed2 * coefficientV;
     obj['seed'] = Math.abs(seed2 - seed1) * coefficientV;
-    obj["vx"] = Math.abs(obj["dx"] - obj["x"]) / (16 * obj["seed"]);
-    obj["vy"] = Math.abs(obj["dy"] - obj["y"]) / (12 * obj["seed"]);
+    obj["vx"] = Math.abs(obj["dx"] - obj["x"]) / (24 * obj["seed"]);
+    obj["vy"] = Math.abs(obj["dy"] - obj["y"]) / (18 * obj["seed"]);
 
     return obj;
 }
