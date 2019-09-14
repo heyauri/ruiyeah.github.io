@@ -16,16 +16,32 @@ canvasImgSwitch.init().then(()=>{
 });
 
 $(document).ready(function(){
+    let playLock=0;
     function playNext(){
+        if(playLock){
+            return;
+        }
+        playLock=1;
         currentIndex++;
         currentIndex=currentIndex%count;
         canvasImgSwitch.playIndex(currentIndex);
         let past=$(".present").removeClass("present").addClass("past");
         $(".content").eq(currentIndex).removeClass("future").addClass("present");
+        $(".bg").eq(currentIndex).removeClass("future").addClass("present");
         setTimeout(()=>{
             past.removeClass("past").addClass("future");
+            playLock=0;
         },1200);
     }
+
+    $("html,body").swipe({
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+            if(direction==="left"||direction==="up"){
+                playNext();
+            }
+        }
+    });
 
     $(".float-btn").click(playNext);
 });

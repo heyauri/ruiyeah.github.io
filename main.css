@@ -3,31 +3,32 @@
     padding: 0;
 }
 
-.bg-wave{
-    background-image: url("img/wave.png");
-    transform: rotateZ(45deg);
-    width: 1920px;
-    height: 787px;
-}
-
 html,body{
     position: relative;
     width: 100%;
     height: 100%;
+    font-size: 62.5%;
 }
 
 .content h1, .content h2, .content h3, .content h4 {
     margin: 20px auto;
     font-weight: 400;
 }
-
+.content h2{
+    font-size: 2.4rem;
+}
+.content h3{
+    font-size: 2rem;
+}
+.content p,td,a{
+    font-size: 1.6rem;
+}
 .content a {
     cursor: pointer;
     text-decoration: none;
 }
 
 .content p {
-    text-indent: 2em;
     text-align: justify;
     padding: 10px;
 }
@@ -62,14 +63,6 @@ main{
     opacity: 1;
 }
 
-.content.past{
-    top: -110vh;
-}
-
-.content.future{
-    top: 120vh;
-}
-
 
 
 .content.first{
@@ -99,7 +92,7 @@ main{
 .contentTable td, .contentTable th {
     padding: 15px 10px;
     text-align: justify;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: normal;
 }
 
@@ -113,11 +106,11 @@ main{
 
 .contentTable tbody tr td {
     padding: 10px 10px;
-    line-height: 1.4em;
+    line-height: 1.4rem;
 }
 
 h1.main-title{
-    font-size: 48px;
+    font-size: 4.8rem;
 }
 
 .bgs{
@@ -129,12 +122,37 @@ h1.main-title{
     z-index: -1000;
 }
 .bgs *{
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 120%;
+    transition: .6s linear;
 }
 .bgs .bg1{
     background-color: #204969;
 }
+
+.bgs .bg2{
+    background-color: #235789;
+}
+.bgs .bg3{
+    background-color: #4c5870;
+}
+.bgs .bg4{
+    background-color: #2d2d2d;
+}
+
+
+.present{
+    top: 0;
+    z-index: 100;
+}
+.past{
+    top: -110vh;
+}
+.future{
+    top: 110vh;
+}
+
 
 @keyframes upAndDown {
     0%{
@@ -160,4 +178,54 @@ h1.main-title{
     transform: rotate(-45deg);
     animation: upAndDown 2s linear infinite;
     cursor: pointer;
+}
+
+.left-td{
+    width: 15rem;
+    text-align: right;
+}
+
+.right-td{
+    width: 22rem;
+}
+
+
+@media screen and (max-width: 1024px){
+    html,body{
+        font-size: 31.25%;
+    }
+
+    main{
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 88%;
+        transform: translate(0,0);
+        flex-direction: column;
+    }
+
+    .left-td{
+        width: 9rem;
+    }
+
+    #contents{
+        min-width: 200px;
+        min-height: 240px;
+    }
+
+    .content.first,.content.second{
+        padding: 60px 30px 10px 40px;
+    }
+
+    .content{
+        padding: 20px;
+    }
+
+    main canvas{
+        transform: scale(0.5);
+    }
+
+    .contentTable{
+        margin: 1rem auto;
+    }
 }
