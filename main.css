@@ -223,7 +223,7 @@ h1.main-title{
     }
 
     main canvas{
-        transform: scale(0.5);
+        transform: scale(0.6,0.5);
     }
 
     .contentTable{
