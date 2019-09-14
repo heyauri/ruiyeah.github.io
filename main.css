@@ -223,7 +223,10 @@ h1.main-title{
     }
 
     main canvas{
-        transform: scale(0.65,0.5);
+        transform: scale(0.6,0.5);
+    }
+    .content h1.main-title{
+        margin: 40px auto 0 auto;
     }
 
     .contentTable{

@@ -11,9 +11,8 @@ let canvasImgSwitch=new CanvasImgSwitch({
 let currentIndex=0;
 let count=4;
 
-canvasImgSwitch.init().then(()=>{
-    canvasImgSwitch.playIndex(0);
-});
+canvasImgSwitch.playIndex(0);
+canvasImgSwitch.init();
 
 $(document).ready(function(){
     let playLock=0;
@@ -25,6 +24,13 @@ $(document).ready(function(){
         currentIndex++;
         currentIndex=currentIndex%count;
         canvasImgSwitch.playIndex(currentIndex);
+        if(window.innerWidth<1024 && currentIndex===2){
+            $("#imgContainer").css({
+                "transform":"scale(0.7,0.5)"
+            });
+        }else{
+            $("#imgContainer")[0].removeAttribute("style");
+        }
         let past=$(".present").removeClass("present").addClass("past");
         $(".content").eq(currentIndex).removeClass("future").addClass("present");
         $(".bg").eq(currentIndex).removeClass("future").addClass("present");
