@@ -229,7 +229,15 @@ h1.main-title{
         margin: 40px auto 0 auto;
     }
 
+    .content.first h1.main-title{
+        margin-top: 15px;
+    }
+
     .contentTable{
         margin: 1rem auto;
+    }
+
+    .content.first h3.hello{
+        margin-bottom: 5px;
     }
 }
