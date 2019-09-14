@@ -198,8 +198,8 @@ export default class CanvasImgSwitch {
                     this.particleDraw(p);
                 }
             } else {
-                let bx=this.particleArr[0].x;
-                let by=this.particleArr[0].y;
+                let bx=this.particleArr[0].dx;
+                let by=this.particleArr[0].dy;
                 for (; i < this.imgDataArr.length; i++) {
                     let p = Particle({
                         color: this.imgDataArr[i].color,
