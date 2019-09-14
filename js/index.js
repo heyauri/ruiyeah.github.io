@@ -1,6 +1,6 @@
 import CanvasImgSwitch from "./canvasImgSwitch.js"
 
-let imgArr=["img/head1.png","img/guai.png","img/rui.png","img/beachside.png"];
+let imgArr=["img/head1.png","img/unsw.png","img/rui.png","img/beachside.png"];
 let canvasImgSwitch=new CanvasImgSwitch({
     id:"imgContainer",
     weight:600,
