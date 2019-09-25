@@ -22,8 +22,8 @@ function Particle(conf) {
 function resetParticle(particle, conf) {
     particle["dx"] = conf["x"];
     particle["dy"] = conf["y"];
-    particle["vx"] = Math.abs(particle["dx"] - particle["x"]) / (16 * particle["seed"]);
-    particle["vy"] = Math.abs(particle["dy"] - particle["y"]) / (12 * particle["seed"]);
+    particle["vx"] = Math.abs(particle["dx"] - particle["x"]) / (24 * particle["seed"]);
+    particle["vy"] = Math.abs(particle["dy"] - particle["y"]) / (18 * particle["seed"]);
 }
 
 function shuffle(arr){

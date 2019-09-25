@@ -25,6 +25,5 @@
     "jquery-touchswipe": "^1.6.19",
     "webpack-dev-server": "^3.8.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

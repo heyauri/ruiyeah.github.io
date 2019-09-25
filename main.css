@@ -238,6 +238,15 @@ h1.main-title{
     }
 
     .content.first h3.hello{
+        width: 48px;
+        height: 28px;
+        line-height: 28px;
         margin-bottom: 5px;
+    }
+
+
+    .contentTable tbody tr td {
+        padding: .5rem 1rem;
+        line-height: 1.4rem;
     }
 }
