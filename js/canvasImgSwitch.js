@@ -198,15 +198,14 @@ export default class CanvasImgSwitch {
                     this.particleDraw(p);
                 }
             } else {
-                let bx=this.particleArr[0].dx;
-                let by=this.particleArr[0].dy;
+                let size=this.particleArr.length;
                 for (; i < this.imgDataArr.length; i++) {
                     let p = Particle({
                         color: this.imgDataArr[i].color,
                         dx: this.imgDataArr[i].x,
                         dy: this.imgDataArr[i].y,
-                        x: bx,
-                        y: by,
+                        x: this.particleArr[i%size].x,
+                        y: this.particleArr[i%size].y,
                     });
                     this.particleArr.push(p);
                     this.animateParticleArr.push(p);
